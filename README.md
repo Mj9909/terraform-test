@@ -9,11 +9,8 @@ This project provisions a **fully automated** single-node Kubernetes cluster usi
 
 ## Architecture Diagram (ASCII)
 Internet
-│
 └─→ Internet Gateway
-│
 └─→ Public Subnet (10.0.1.0/24)
-│
 └─→ t4g.medium EC2 (Amazon Linux 2 ARM64)
 ├─ Docker
 ├─ Minikube (Docker driver)
@@ -38,4 +35,5 @@ ssh_command     = "ssh -i ec2_key.pem ec2-user@3.14.159.26"
 Default Grafana login: admin / prom-operator
 
 terraform destroy -auto-approve
+
 rm ec2_key.pem
